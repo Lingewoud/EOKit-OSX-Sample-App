@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <EOKit/EOKit.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    HelloWorld *objectOfYourCustomClass = [[HelloWorld alloc] init];
+    objectOfYourCustomClass.name = @"Pim";
+    [objectOfYourCustomClass sayHello];
+
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

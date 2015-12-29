@@ -1,0 +1,38 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFOAuth2Manager (2.2.0):
+    - AFNetworking/NSURLConnection (~> 2.2)
+  - EOKit (0.0.2):
+    - AFNetworking (~> 2.2)
+    - AFOAuth2Manager (~> 2.2)
+
+DEPENDENCIES:
+  - EOKit (from `/Users/pim/RnD/ExactOnlineLibs/EOKit`)
+
+EXTERNAL SOURCES:
+  EOKit:
+    :path: "/Users/pim/RnD/ExactOnlineLibs/EOKit"
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AFOAuth2Manager: 952eb62e8fd8022971e64c6e8fe28b9e999224af
+  EOKit: 2e55c5704b044415626f5c44757fe6f84d142cf3
+
+COCOAPODS: 0.39.0
