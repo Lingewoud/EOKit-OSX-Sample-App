@@ -4,6 +4,6 @@
 # use_frameworks!
 
 target 'EO Sample OS X' do
-    pod 'EOKit', :path => '/Users/pim/RnD/ExactOnlineLibs/EOKit'
+  pod 'EOKit', :path => '/Users/pim/RnD/ExactOnlineLibs/EOKit'
 end
 
