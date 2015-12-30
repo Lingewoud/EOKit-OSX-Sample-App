@@ -22,6 +22,7 @@
 //@property (retain) EOLoginViewController *loginController;
 
 @property (nonatomic, strong) IBOutlet NSButton	*loginButton;
+@property (nonatomic, strong) IBOutlet NSButton	*logoutButton;
 @property (nonatomic, strong) IBOutlet NSView *contentArea;
 
 @property (nonatomic, strong) NSViewController *listingController;
@@ -39,6 +40,9 @@
     [_loginButton setTarget:self];
     [_loginButton setAction:@selector(loginAction:)];
 
+    [_logoutButton setTarget:self];
+    [_logoutButton setAction:@selector(logoutAction:)];
+    
     //HelloWorld *objectOfYourCustomClass = [[HelloWorld alloc] init];
     //objectOfYourCustomClass.name = @"Pim";
     //[objectOfYourCustomClass sayHello];
@@ -51,6 +55,15 @@
     NSLog(@"Goodbye...");
 }
 
+
+- (IBAction)logoutAction:(id)sender {
+    HelloWorld *objectOfYourCustomClass = [[HelloWorld alloc] init];
+    objectOfYourCustomClass.name = @"Pim";
+    [objectOfYourCustomClass sayHello];
+    
+    _listingController = [[EOResourceListingController alloc] init];
+    [_contentArea addSubview:_listingController.view];
+}
 
 - (IBAction)loginAction:(id)sender {
     
@@ -87,12 +100,7 @@
     [[EOAPIProvider providerWithClientId:clientId secret:secret] authorizeWithCallbackURL:callbackURL authViewController:_authView completion:^(NSError *error) {
         if (!error) {
             
-            HelloWorld *objectOfYourCustomClass = [[HelloWorld alloc] init];
-            objectOfYourCustomClass.name = @"Pim";
-            [objectOfYourCustomClass sayHello];
-            
-            _listingController = [[EOResourceListingController alloc] init];           
-            [_contentArea addSubview:_listingController.view];
+
             
             //[self.navigationController pushViewController:[EOGLAccountsTableViewController new] animated:YES];
         } else {

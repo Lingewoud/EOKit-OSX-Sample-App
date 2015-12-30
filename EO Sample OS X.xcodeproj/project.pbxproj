@@ -13,8 +13,6 @@
 		3EA0B1671C32ACD900B664E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0B1661C32ACD900B664E4 /* main.m */; };
 		3EA0B1691C32ACD900B664E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA0B1681C32ACD900B664E4 /* Assets.xcassets */; };
 		3EA0B16C1C32ACD900B664E4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA0B16A1C32ACD900B664E4 /* MainMenu.xib */; };
-		3EA0B1CF1C32D41C00B664E4 /* EOLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0B1CD1C32D41C00B664E4 /* EOLoginViewController.m */; };
-		3EA0B1D01C32D41C00B664E4 /* EOLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA0B1CE1C32D41C00B664E4 /* EOLoginViewController.xib */; };
 		B799B10312297F9916B2AEAD /* libPods-EO Sample OS X.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 016631FDDF8288C6AFEB4140 /* libPods-EO Sample OS X.a */; };
 /* End PBXBuildFile section */
 
@@ -31,9 +29,6 @@
 		3EA0B1681C32ACD900B664E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EA0B16B1C32ACD900B664E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3EA0B16D1C32ACD900B664E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EA0B1CC1C32D41B00B664E4 /* EOLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOLoginViewController.h; sourceTree = "<group>"; };
-		3EA0B1CD1C32D41C00B664E4 /* EOLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOLoginViewController.m; sourceTree = "<group>"; };
-		3EA0B1CE1C32D41C00B664E4 /* EOLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EOLoginViewController.xib; sourceTree = "<group>"; };
 		ED44FAEC76558E5371A7AE21 /* Pods-EO Sample OS X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EO Sample OS X.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EO Sample OS X/Pods-EO Sample OS X.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,9 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				3E7E3D471C33EE20004C43E7 /* Listing */,
-				3EA0B1CC1C32D41B00B664E4 /* EOLoginViewController.h */,
-				3EA0B1CD1C32D41C00B664E4 /* EOLoginViewController.m */,
-				3EA0B1CE1C32D41C00B664E4 /* EOLoginViewController.xib */,
 				3EA0B1621C32ACD900B664E4 /* AppDelegate.h */,
 				3EA0B1631C32ACD900B664E4 /* AppDelegate.m */,
 				3EA0B1681C32ACD900B664E4 /* Assets.xcassets */,
@@ -182,7 +174,6 @@
 				3EA0B1691C32ACD900B664E4 /* Assets.xcassets in Resources */,
 				3EA0B16C1C32ACD900B664E4 /* MainMenu.xib in Resources */,
 				3E7E3D461C33EE1B004C43E7 /* EOResourceListingController.xib in Resources */,
-				3EA0B1D01C32D41C00B664E4 /* EOLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +233,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EA0B1671C32ACD900B664E4 /* main.m in Sources */,
-				3EA0B1CF1C32D41C00B664E4 /* EOLoginViewController.m in Sources */,
 				3E7E3D451C33EE1B004C43E7 /* EOResourceListingController.m in Sources */,
 				3EA0B1641C32ACD900B664E4 /* AppDelegate.m in Sources */,
 			);

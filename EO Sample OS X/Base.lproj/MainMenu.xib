@@ -16,6 +16,7 @@
             <connections>
                 <outlet property="contentArea" destination="eN5-wP-KtD" id="pSB-rp-VzE"/>
                 <outlet property="loginButton" destination="RKc-5d-Nm5" id="cwH-XD-Ir6"/>
+                <outlet property="logoutButton" destination="ZBA-GI-ODC" id="ieX-uA-X1F"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -678,6 +679,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="592" height="414"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKc-5d-Nm5">
+                        <rect key="frame" x="8" y="370" width="74" height="32"/>
+                        <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eqV-tm-8Iu">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eN5-wP-KtD">
                         <rect key="frame" x="0.0" y="0.0" width="592" height="353"/>
                     </customView>
@@ -687,9 +695,9 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <font key="titleFont" metaFont="system"/>
                     </box>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKc-5d-Nm5">
-                        <rect key="frame" x="8" y="370" width="74" height="32"/>
-                        <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eqV-tm-8Iu">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZBA-GI-ODC">
+                        <rect key="frame" x="78" y="370" width="83" height="32"/>
+                        <buttonCell key="cell" type="push" title="Logout" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6pc-ab-8qR">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>

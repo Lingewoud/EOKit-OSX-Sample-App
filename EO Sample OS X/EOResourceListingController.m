@@ -7,11 +7,15 @@
 //
 
 #import "EOResourceListingController.h"
+#import <EOKit/EOAPIProvider.h>
 
 @interface EOResourceListingController ()
 
     @property (nonatomic, strong) IBOutlet NSButton	*deleteButton;
-    @property (nonatomic, strong) IBOutlet NSTableView	*tableView;
+    @property (nonatomic, strong) IBOutlet NSTableView *tableView;
+
+    @property (nonatomic, strong) NSArray *addressesList;
+
 
 @end
 
@@ -19,11 +23,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //[_tableView setDataSource:self];
+    //self.title = @"GLAccounts";
+    [self requestAccounts];
+    //NSLog(@"numbers: %@", self.numbers);
 }
 
-#pragma mark - Custom Initialisers
+- (void)handleError:(NSError *)error {
+    NSLog(@"%s error == %@", __PRETTY_FUNCTION__, error);
+}
+
+- (void)requestMe {
+    [[EOAPIProvider anyProvider] restGetAPI:@"current/Me" completion:^(NSArray *results, NSError *error) {
+        if (!error) {
+            NSLog(@"requesting acccounts");
+            [self requestAccounts];
+        } else {
+            [self handleError:error];
+        }
+    }];
+}
+
+- (void)requestAccounts {
+    if (![EOAPIProvider anyProvider].currentDivision) {
+        [self requestMe];
+    } else {
+        NSLog(@"requesting acccounts 2");
+
+        [[EOAPIProvider anyProvider] restGetAPI:@"crm/Accounts" division:[EOAPIProvider anyProvider].currentDivision odataParams:@{ @"$orderby" : @"Name" } grabAllItems:YES completion:^(NSArray *results, NSError *error) {
+            if (!error) {
+                self.addressesList = results;
+                NSLog(@"Addresses: %@", self.addressesList);
+                [self.tableView reloadData];
+            } else {
+                [self handleError:error];
+            }
+        }];
+    }
+}
+
 
 - (NSArray *)numbers {
     
@@ -42,32 +79,28 @@
 }
 
 
-#pragma mark - Table View Data Source
-
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    
-    // how many rows do we have here?
-    return self.numbers.count;
+    return self.addressesList.count;
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     
-    // populate each row of our table view with data
-    // display a different value depending on each column (as identified in XIB)
     
-    if ([tableColumn.identifier isEqualToString:@"numbers"]) {
-        
-        // first colum (numbers)
-        return [self.numbers objectAtIndex:row];
+    NSDictionary *addressDict = self.addressesList[row];
+    NSLog(@"val: %@ ", addressDict[@"Name"] );
+  //  cell.textLabel.text = addressDict[@"Description"];
+  //  cell.detailTextLabel.text = addressDict[@"TypeDescription"];
+    
+    if ([tableColumn.identifier isEqualToString:@"Name"]) {
+        return addressDict[@"Name"];
+ //       return [self.numbers objectAtIndex:row];
         
     } else {
-        
-        // second column (numberCodes)
-        return [self.numberCodes objectAtIndex:row];
+        return addressDict[@"City"];
+
+ //       return [self.numberCodes objectAtIndex:row];
     }
 }
-
-#pragma mark - Table View Delegate
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     
