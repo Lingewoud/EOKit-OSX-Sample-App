@@ -24,7 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-    
     self.title = @"Exact Online";
     [_loginButton setTarget:self];
     [_loginButton setAction:@selector(loginAction:)];
@@ -67,7 +66,7 @@
         if (!error) {
 
             HelloWorld *objectOfYourCustomClass = [[HelloWorld alloc] init];
-            objectOfYourCustomClass.name = @"Pimx";
+            objectOfYourCustomClass.name = @"Pim";
             [objectOfYourCustomClass sayHello];
             
             //[self.navigationController pushViewController:[EOGLAccountsTableViewController new] animated:YES];

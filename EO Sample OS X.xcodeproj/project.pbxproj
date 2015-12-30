@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E7E3D451C33EE1B004C43E7 /* EOResourceListingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7E3D431C33EE1B004C43E7 /* EOResourceListingController.m */; };
+		3E7E3D461C33EE1B004C43E7 /* EOResourceListingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E7E3D441C33EE1B004C43E7 /* EOResourceListingController.xib */; };
 		3EA0B1641C32ACD900B664E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0B1631C32ACD900B664E4 /* AppDelegate.m */; };
 		3EA0B1671C32ACD900B664E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0B1661C32ACD900B664E4 /* main.m */; };
 		3EA0B1691C32ACD900B664E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA0B1681C32ACD900B664E4 /* Assets.xcassets */; };
@@ -19,6 +21,9 @@
 /* Begin PBXFileReference section */
 		016631FDDF8288C6AFEB4140 /* libPods-EO Sample OS X.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EO Sample OS X.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F059BCFD237615980E7C87 /* Pods-EO Sample OS X.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EO Sample OS X.release.xcconfig"; path = "Pods/Target Support Files/Pods-EO Sample OS X/Pods-EO Sample OS X.release.xcconfig"; sourceTree = "<group>"; };
+		3E7E3D421C33EE1B004C43E7 /* EOResourceListingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOResourceListingController.h; sourceTree = "<group>"; };
+		3E7E3D431C33EE1B004C43E7 /* EOResourceListingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOResourceListingController.m; sourceTree = "<group>"; };
+		3E7E3D441C33EE1B004C43E7 /* EOResourceListingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EOResourceListingController.xib; sourceTree = "<group>"; };
 		3EA0B15F1C32ACD900B664E4 /* EO Sample OS X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EO Sample OS X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA0B1621C32ACD900B664E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EA0B1631C32ACD900B664E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E7E3D471C33EE20004C43E7 /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				3E7E3D421C33EE1B004C43E7 /* EOResourceListingController.h */,
+				3E7E3D431C33EE1B004C43E7 /* EOResourceListingController.m */,
+				3E7E3D441C33EE1B004C43E7 /* EOResourceListingController.xib */,
+			);
+			name = Listing;
+			sourceTree = "<group>";
+		};
 		3EA0B1561C32ACD900B664E4 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +80,7 @@
 		3EA0B1611C32ACD900B664E4 /* EO Sample OS X */ = {
 			isa = PBXGroup;
 			children = (
+				3E7E3D471C33EE20004C43E7 /* Listing */,
 				3EA0B1CC1C32D41B00B664E4 /* EOLoginViewController.h */,
 				3EA0B1CD1C32D41C00B664E4 /* EOLoginViewController.m */,
 				3EA0B1CE1C32D41C00B664E4 /* EOLoginViewController.xib */,
@@ -165,6 +181,7 @@
 			files = (
 				3EA0B1691C32ACD900B664E4 /* Assets.xcassets in Resources */,
 				3EA0B16C1C32ACD900B664E4 /* MainMenu.xib in Resources */,
+				3E7E3D461C33EE1B004C43E7 /* EOResourceListingController.xib in Resources */,
 				3EA0B1D01C32D41C00B664E4 /* EOLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +243,7 @@
 			files = (
 				3EA0B1671C32ACD900B664E4 /* main.m in Sources */,
 				3EA0B1CF1C32D41C00B664E4 /* EOLoginViewController.m in Sources */,
+				3E7E3D451C33EE1B004C43E7 /* EOResourceListingController.m in Sources */,
 				3EA0B1641C32ACD900B664E4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
