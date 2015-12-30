@@ -18,23 +18,23 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jMU-tu-JyL">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jMU-tu-JyL">
                     <rect key="frame" x="7" y="3" width="78" height="32"/>
                     <buttonCell key="cell" type="push" title="delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="d7E-9q-3YE">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E6A-eb-Gwd">
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E6A-eb-Gwd">
                     <rect key="frame" x="86" y="3" width="81" height="32"/>
                     <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1Lt-eO-vgo">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
-                <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyK-hE-wop">
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyK-hE-wop">
                     <rect key="frame" x="0.0" y="39" width="480" height="233"/>
-                    <clipView key="contentView" ambiguous="YES" id="Wn2-Gw-A3M">
+                    <clipView key="contentView" id="Wn2-Gw-A3M">
                         <rect key="frame" x="1" y="0.0" width="478" height="232"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -94,6 +94,16 @@
                     </tableHeaderView>
                 </scrollView>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jMU-tu-JyL" secondAttribute="bottom" constant="10" id="4B9-Ug-Rq9"/>
+                <constraint firstItem="E6A-eb-Gwd" firstAttribute="top" secondItem="EyK-hE-wop" secondAttribute="bottom" constant="8" id="8Z5-KP-AzH"/>
+                <constraint firstItem="EyK-hE-wop" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="KbI-fB-7Np"/>
+                <constraint firstItem="EyK-hE-wop" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="T7k-Xe-zwY"/>
+                <constraint firstAttribute="trailing" secondItem="EyK-hE-wop" secondAttribute="trailing" id="UyV-xc-LzB"/>
+                <constraint firstItem="jMU-tu-JyL" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="13" id="YJ4-fo-xez"/>
+                <constraint firstItem="E6A-eb-Gwd" firstAttribute="leading" secondItem="jMU-tu-JyL" secondAttribute="trailing" constant="13" id="kSv-Vg-1ws"/>
+                <constraint firstAttribute="bottom" secondItem="E6A-eb-Gwd" secondAttribute="bottom" constant="10" id="x8W-Ry-2yI"/>
+            </constraints>
             <point key="canvasLocation" x="364" y="257"/>
         </customView>
     </objects>

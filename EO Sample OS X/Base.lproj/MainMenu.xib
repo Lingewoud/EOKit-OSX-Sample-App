@@ -679,23 +679,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="592" height="414"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKc-5d-Nm5">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RKc-5d-Nm5">
                         <rect key="frame" x="8" y="370" width="74" height="32"/>
                         <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eqV-tm-8Iu">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eN5-wP-KtD">
-                        <rect key="frame" x="0.0" y="0.0" width="592" height="353"/>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="eN5-wP-KtD">
+                        <rect key="frame" x="0.0" y="0.0" width="592" height="361"/>
                     </customView>
-                    <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-xS-ek1">
+                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-xS-ek1">
                         <rect key="frame" x="0.0" y="359" width="592" height="5"/>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <font key="titleFont" metaFont="system"/>
                     </box>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZBA-GI-ODC">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZBA-GI-ODC">
                         <rect key="frame" x="78" y="370" width="83" height="32"/>
                         <buttonCell key="cell" type="push" title="Logout" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6pc-ab-8qR">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -703,6 +703,19 @@
                         </buttonCell>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="RKc-5d-Nm5" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="14" id="6pc-BF-7HA"/>
+                    <constraint firstItem="eN5-wP-KtD" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="CfM-qA-l6i"/>
+                    <constraint firstItem="RKc-5d-Nm5" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="16" id="H53-4F-XeV"/>
+                    <constraint firstItem="ZBA-GI-ODC" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="16" id="JgZ-cL-QHl"/>
+                    <constraint firstAttribute="bottom" secondItem="eN5-wP-KtD" secondAttribute="bottom" id="U9i-jT-Iv5"/>
+                    <constraint firstItem="ZBA-GI-ODC" firstAttribute="leading" secondItem="RKc-5d-Nm5" secondAttribute="trailing" constant="8" id="WFq-ux-z8J"/>
+                    <constraint firstItem="eN5-wP-KtD" firstAttribute="top" secondItem="cpK-xS-ek1" secondAttribute="bottom" id="XTl-kE-BYw"/>
+                    <constraint firstAttribute="trailing" secondItem="cpK-xS-ek1" secondAttribute="trailing" id="ZbZ-49-aod"/>
+                    <constraint firstAttribute="trailing" secondItem="eN5-wP-KtD" secondAttribute="trailing" id="bj4-PP-wct"/>
+                    <constraint firstItem="cpK-xS-ek1" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="irC-0K-ZoD"/>
+                    <constraint firstItem="cpK-xS-ek1" firstAttribute="top" secondItem="ZBA-GI-ODC" secondAttribute="bottom" constant="15" id="v5S-NC-JWd"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="346" y="289"/>
         </window>

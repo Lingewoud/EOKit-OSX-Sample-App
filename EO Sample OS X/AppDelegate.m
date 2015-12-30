@@ -7,19 +7,14 @@
 //
 
 #import "AppDelegate.h"
-//#import "EOLoginViewController.h"
 #import <EOKit/EOKit.h>
-
 #import <EOKit/EOAPIProvider.h>
-
 #import <EOKit/EOAuthorizationViewController.h>
 #import "EOResourceListingController.h"
-
 
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
-//@property (retain) EOLoginViewController *loginController;
 
 @property (nonatomic, strong) IBOutlet NSButton	*loginButton;
 @property (nonatomic, strong) IBOutlet NSButton	*logoutButton;
@@ -43,26 +38,15 @@
     [_logoutButton setTarget:self];
     [_logoutButton setAction:@selector(logoutAction:)];
     
-    //HelloWorld *objectOfYourCustomClass = [[HelloWorld alloc] init];
-    //objectOfYourCustomClass.name = @"Pim";
-    //[objectOfYourCustomClass sayHello];
-    
-    //_loginController = [[EOLoginViewController alloc] initWithNibName:@"EOLoginViewController" bundle:nil];
-    //[self.window.contentView addSubview: _loginController.view];
+
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     NSLog(@"Goodbye...");
 }
 
-
 - (IBAction)logoutAction:(id)sender {
-    HelloWorld *objectOfYourCustomClass = [[HelloWorld alloc] init];
-    objectOfYourCustomClass.name = @"Pim";
-    [objectOfYourCustomClass sayHello];
-    
-    _listingController = [[EOResourceListingController alloc] init];
-    [_contentArea addSubview:_listingController.view];
+
 }
 
 - (IBAction)loginAction:(id)sender {
@@ -70,8 +54,6 @@
     NSString *clientId = @"b2314659-95c7-4bf6-8450-468db26abe8f";
     NSString *secret = @"AAtLBzurJ8B1";
     NSString *callbackURL = @"https://www.getpostman.com/oauth2/callback";
-    
-    NSLog(@"aha: %@, %@, %@", clientId, secret, callbackURL);
     
     NSRect frame = NSMakeRect(0, 0, 400, 400);
     
@@ -100,17 +82,23 @@
     [[EOAPIProvider providerWithClientId:clientId secret:secret] authorizeWithCallbackURL:callbackURL authViewController:_authView completion:^(NSError *error) {
         if (!error) {
             
+            [_authWindow close];
+            _listingController = [[EOResourceListingController alloc] init];
+//            NSView *contentView = _listingController.view;
+
+            [_contentArea addSubview:_listingController.view];
+            _listingController.view.frame = _contentArea.bounds;
+            _listingController.view.autoresizingMask = _contentArea.autoresizingMask;
 
             
-            //[self.navigationController pushViewController:[EOGLAccountsTableViewController new] animated:YES];
+//            NSDictionary *viewBindings = NSDictionaryOfVariableBindings(contentView);
+//            [_contentArea addConstraints: [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[contentView]|" options:0 metrics:nil views:viewBindings]];
+//            [_contentArea addConstraints: [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[contentView]|" options:0 metrics:nil views:viewBindings]];
+            
         } else {
             NSLog(@"error == %@", error);
         }
     }];
-    
 }
-
-
-
 
 @end
