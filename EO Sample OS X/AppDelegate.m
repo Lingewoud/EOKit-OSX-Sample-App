@@ -84,13 +84,12 @@
             
             [_authWindow close];
             _listingController = [[EOResourceListingController alloc] init];
-//            NSView *contentView = _listingController.view;
 
             [_contentArea addSubview:_listingController.view];
             _listingController.view.frame = _contentArea.bounds;
             _listingController.view.autoresizingMask = _contentArea.autoresizingMask;
 
-            
+//            NSView *contentView = _listingController.view;
 //            NSDictionary *viewBindings = NSDictionaryOfVariableBindings(contentView);
 //            [_contentArea addConstraints: [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[contentView]|" options:0 metrics:nil views:viewBindings]];
 //            [_contentArea addConstraints: [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[contentView]|" options:0 metrics:nil views:viewBindings]];

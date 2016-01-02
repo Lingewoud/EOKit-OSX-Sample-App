@@ -22,6 +22,11 @@ PODS:
   - EOKit (0.0.2):
     - AFNetworking (~> 2.2)
     - AFOAuth2Manager (~> 2.2)
+    - EOKit/IOS (= 0.0.2)
+    - EOKit/OSX (= 0.0.2)
+  - EOKit/OSX (0.0.2):
+    - AFNetworking (~> 2.2)
+    - AFOAuth2Manager (~> 2.2)
 
 DEPENDENCIES:
   - EOKit (from `/Users/pim/RnD/ExactOnlineLibs/EOKit`)
@@ -33,6 +38,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   AFOAuth2Manager: 952eb62e8fd8022971e64c6e8fe28b9e999224af
-  EOKit: 2e55c5704b044415626f5c44757fe6f84d142cf3
+  EOKit: 18dcdefdec02f5deaf0a55189892654d970f2c33
 
 COCOAPODS: 0.39.0
